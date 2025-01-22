@@ -1,0 +1,17 @@
+import copy
+
+nested_list = [[1, 2], [3, 4]]
+
+alias_nested = nested_list
+alias_nested[0][1] = 99
+
+print("Original nested list after alias modification:", nested_list)
+print("Aliased nested list:", alias_nested)
+
+nested_list = [[1, 2], [3, 4]]
+deep_copy_list = copy.deepcopy(nested_list)
+
+deep_copy_list[0][1] = 77
+
+print("Original nested list remains unchanged:", nested_list)
+print("Deep copied list after modification:", deep_copy_list)
