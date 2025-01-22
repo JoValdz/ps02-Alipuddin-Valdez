@@ -1,0 +1,16 @@
+# Original nested list
+nested_list = [[1, 2], [3, 4]]
+# Create an alias of the nested list
+alias_nested = nested_list
+alias_nested[0][1] = 99
+# Display changes in the aliased list and the original
+print("Original nested list after alias modification:", nested_list)
+print("Aliased nested list:", alias_nested)
+# Create an independent deep copy of the original nested list
+nested_list = [[1, 2], [3, 4]]  # Resetting original list
+deep_copy_list = copy.deepcopy(nested_list)
+# Modify the deep copy
+deep_copy_list[0][1] = 77
+# Display original list and deep copy after modification
+print("Original nested list remains unchanged:", nested_list)
+print("Deep copied list after modification:", deep_copy_list)
